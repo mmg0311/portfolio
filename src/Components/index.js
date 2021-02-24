@@ -1,0 +1,11 @@
+import About from './About/About';
+import Contact from './Contact/Contact';
+import Experience from './Experience/Experience';
+import Float from './Float/Float';
+import Footer from './Footer/Footer';
+import Home from './Home/Home';
+import Navbar from './Navbar/Navbar';
+import Project from './Projects/Project';
+import Sidebar from './Sidebar/Sidebar';
+import Skills from './Skills/Skills';
+export {About,Contact,Experience,Float,Footer,Home,Navbar,Project,Sidebar,Skills};
