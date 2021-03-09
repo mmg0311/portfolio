@@ -19,73 +19,59 @@ const Skills = () => {
       <section id="skills" className="skills">
          <div className="skills__container">
             <div className="skills__header">
-               <h3>Skills 😍</h3>
+               <h3>Skills </h3>
             </div>
             <div className="skills__content">
                <div className="row">
                   <div className="col">
-                     <img src={js} alt="" />
-                     <span className="tooltiptext">JavaScript</span>
+                     <img src={js} alt="" data-tip="JavaScript"/>
                   </div>
                   <div className="col">
-                     <img src={cplus} alt="" />
-                     <span className="tooltiptext">C++</span>
+                     <img src={cplus} alt="" data-tip="C++"/>
+                     
                   </div>
                   <div className="col">
-                     <img src={c} alt="" />
-                     <span className="tooltiptext">C</span>
+                     <img src={c} alt="" data-tip="C"/>
                   </div>
                   <div className="col">
-                     <img src={node} alt="" />
-                     <span className="tooltiptext">NodeJS</span>
+                     <img src={node} alt="" data-tip="NodeJS"/>
                   </div>
                   <div className="col">
-                     <img src={spring} alt="" />
-                     <span className="tooltiptext">Spring Boot</span>
+                     <img src={spring} alt="" data-tip="Spring Boot"/>
                   </div>
                </div>
                <div className="row">
                   <div className="col">
-                     <img src={react} alt="" />
-                     <span className="tooltiptext">React JS</span>
+                     <img src={react} alt="" data-tip="ReactJS"/>
                   </div>
                   <div className="col">
-                     <img src={redux} alt="" />
-                     <span className="tooltiptext">Redux</span>
+                     <img src={redux} alt="" data-tip="Redux"/>
                   </div>
                   <div className="col">
-                     <img src={graphql} alt="" />
-                     <span className="tooltiptext">GraphQL</span>
+                     <img src={graphql} alt="" data-tip="GraphQL"/>
                   </div>
                   <div className="col">
-                     <img src={firebase} alt="" />
-                     <span className="tooltiptext">Firebase</span>
+                     <img src={firebase} alt="" data-tip="Firebase"/>
                   </div>
                   <div className="col">
-                     <img src={figma} alt="" />
-                     <span className="tooltiptext">Figma</span>
+                     <img src={figma} alt="" data-tip="figma"/>
                   </div>
                </div>
                <div className="row">
                   <div className="col">
-                     <img src={mysql} alt="" />
-                     <span className="tooltiptext">MySQL</span>
+                     <img src={mysql} alt="" data-tip="MYSQL"/>
                   </div>
                   <div className="col">
-                     <img src={postgresql} alt="" />
-                     <span className="tooltiptext">PostGreSQL</span>
+                     <img src={postgresql} alt="" data-tip="PostgreSQL"/>
                   </div>
                   <div className="col">
-                     <img src={aws} alt="" />
-                     <span className="tooltiptext">Amazon Web Services</span>
+                     <img src={aws} alt="" data-tip="Amazon web services"/>
                   </div>
                   <div className="col">
-                     <img src={html} alt="" />
-                     <span className="tooltiptext">HTML 5</span>
+                     <img src={html} alt="" data-tip="HTML 5"/>
                   </div>
                   <div className="col">
-                     <img src={css} alt="" />
-                     <span className="tooltiptext">CSS 3</span>
+                     <img src={css} alt="" data-tip="CSS 3"/>
                   </div>
                </div>
             </div>

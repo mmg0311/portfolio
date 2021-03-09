@@ -10,7 +10,7 @@ const ExperienceCard = () => {
             <div className="exp__cardHeader">
                <h3>Full Stack Intern @Dailykit</h3>
                <span className="exp__links">
-                  <a href="https://www.linkedin.com/company/dailykit/" target="_blank"><i class="fab fa-linkedin-in fa-lg"></i></a>
+                  <a href="https://www.linkedin.com/company/dailykit/" target="_blank"><i className="fab fa-linkedin-in fa-lg"></i></a>
                </span>
             </div>
             <p>

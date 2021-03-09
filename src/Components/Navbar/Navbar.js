@@ -14,11 +14,11 @@ const Navbar = () => {
                <img src={Logo} alt="logo" />
             </div>
             <ul className="navbar__right">
-               <li><a href="https://www.linkedin.com/in/mohakgadge/" target="_blank"><i class="fab fa-linkedin-in fa-lg"></i></a></li>
-               <li><a href="http://github.com/mmg0311" target="_blank"><i class="fab fa-github fa-lg"></i></a></li>
+               <li><a href="https://www.linkedin.com/in/mohakgadge/" target="_blank"><i className="fab fa-linkedin-in fa-lg"></i></a></li>
+               <li><a href="http://github.com/mmg0311" target="_blank"><i className="fab fa-github fa-lg"></i></a></li>
                <li>
                   <a href="" onClick={handleClick}>
-                     {(isOpen === false) ? <i class="fas fa-bars fa-lg"></i> : <i class="fas fa-times"></i>}
+                     {(isOpen === false) ? <i className="fas fa-bars fa-lg"></i> : <i className="fas fa-times"></i>}
                   </a>
                </li>
             </ul>
