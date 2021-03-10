@@ -4,8 +4,8 @@ import ReactTooltip from 'react-tooltip';
 function App() {
    return (
       <div className="app">
-         <ReactTooltip effect="solid" place="bottom" type="info"  clickable={true}/>
-         <Navbar />
+         <ReactTooltip className="tooltip" effect="solid" place="bottom"  clickable={true}/>
+         <Navbar />  
          <Sidebar />
          <main>
             <Home />

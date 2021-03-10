@@ -47,7 +47,7 @@ const Sidebar = () => {
                   activeClass="active" 
                   spy={true}
                   smooth={true}
-                  offset={70}
+                  offset={40}
                   duration={100}
                   to="projects">
                      <i className="fas fa-cogs"></i> Project
@@ -64,7 +64,7 @@ const Sidebar = () => {
             </div>
          </div>
          <div className="sidebar__contact">
-            <a href="https://www.linkedin.com/in/mohakgadge/" target="_blank" data-tip="LinkedIn Profile"><i className="fab fa-linkedin-in fa-lg" ></i></a>
+            <a href="https://www.linkedin.com/in/mohakgadge/" target="_blank" data-tip="LinkedIn Profile" ><i className="fab fa-linkedin-in fa-lg" ></i></a>
             <a href="mailto:mohakgadge@gmail.com" data-tip="Email ID"><i className="fas fa-envelope fa-lg"></i></a>
             <a href="tel:+917798750281" data-tip="Whatsapp Number"><i className="fab fa-whatsapp fa-lg" ></i></a>
             <a href="https://www.instagram.com/mohakgadge/" target="_blank" data-tip="Instagram Profile"><i className="fab fa-instagram fa-lg" ></i></a>
