@@ -1,25 +1,35 @@
-import React from 'react'
+import React from "react";
+import { ReactComponent as ReactLogo } from "../../assets/images/home.svg";
+import { Link, animateScroll as scroll } from "react-scroll";
 const Home = () => {
-   return (
-      <section id="home" className="home">
-         <div className="home__container">
-            <div className="home__content">
-               <div className="home__header">
-                  <h3>
-                     Hey 👋,<br /> I am <span>MOHAK GADGE</span>
-                  </h3>
-               </div>
-               <div className="home__subtitle">
-                  <h4>Web Developer</h4>
-               </div>
-               <div className="home__actionbtn">
-                  <a href="#experience"><span className="btn workbtn">My Work</span></a>
-                  <a href="#contact"><span className="btn hirebtn">Hire Me</span></a>
-               </div>
-            </div>
-         </div>
-      </section>
-   )
-}
+  return (
+    <section id="home" className="home ">
+      <div className="home__container container">
+        <div className="home__content">
+          <div className="home__header">
+            <h3>
+              Hey 👋,
+              <br /> I am <span>MOHAK GADGE</span>
+            </h3>
+          </div>
+          <div className="home__subtitle">
+            <h4>Web Developer</h4>
+          </div>
+          <div className="home__actionbtn">
+            <Link to="experience">
+              <span className="btn workbtn">My Work</span>
+            </Link>
+            <Link to="contact">
+              <span className="btn hirebtn">Hire Me</span>
+            </Link>
+          </div>
+        </div>
+        <div className="right">
+          <ReactLogo />
+        </div>
+      </div>
+    </section>
+  );
+};
 
-export default Home
+export default Home;
