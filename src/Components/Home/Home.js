@@ -13,7 +13,7 @@ const Home = () => {
             </h3>
           </div>
           <div className="home__subtitle">
-            <h4>Web Developer</h4>
+            <h4>Software Engineer</h4>
           </div>
           <div className="home__actionbtn">
             <Link to="experience">

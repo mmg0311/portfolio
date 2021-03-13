@@ -2,6 +2,12 @@
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+  user-select: none;
+}
+input,
+button,
+submit {
+  border: none;
 }
 :root {
   --heading-size: 3em;
@@ -168,6 +174,7 @@ p {
   font-size: 1.3em;
   border-radius: 5px;
   align-items: center;
+  box-shadow: var(--card-shadow);
 }
 .workbtn {
   background-color: var(--primary-button-color);
@@ -550,7 +557,7 @@ p {
   color: var(--top-nav-font-color);
   opacity: 0.8;
   margin-right: 20px;
-  background-color: #ffffff;
+  background-color: var(--card-color);
   border: 1px solid #ebebeb;
   padding: 5px 10px;
   border-radius: 50px;
@@ -602,6 +609,7 @@ p {
   bottom: -15px;
   right: 10px;
   padding: 5px 10px;
+  font-size: 0.9em;
 }
 .success {
   background-color: #edf7ed;
@@ -622,6 +630,18 @@ p {
 .fail > p > span {
   color: #b62e27;
   font-weight: bold;
+}
+@media (max-width: 1200px) {
+  .alert {
+    font-size: 0.8em;
+  }
+}
+@media (max-width: 450px) {
+  .alert {
+    right: 5px;
+    font-size: 0.6em;
+    padding: 5px 6px;
+  }
 }
 .contact__links {
   background-color: #0e4171;
@@ -1021,5 +1041,58 @@ center > h3 {
   }
   100% {
     opacity: 1;
+  }
+}
+/* loader animation */
+.circle {
+  background-color: #fff;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  box-shadow: -10px -10px 15px rgba(255, 255, 255, 0.13),
+    10px 10px 15px rgba(70, 70, 70, 0.36),
+    inset -10px -10px 15px rgba(255, 255, 255, 0.13),
+    inset 10px 10px 15px rgba(70, 70, 70, 0.36);
+  border: 10px solid #fff;
+  background-color: var(--primary-background);
+}
+
+.circle4 {
+  width: 20px;
+  height: 20px;
+  animation: glow4 1.5s infinite ease;
+}
+@keyframes glow4 {
+  0% {
+    background-color: #fff;
+  }
+  20% {
+    background-color: #3881ff;
+    border-radius: 50%;
+  }
+  100% {
+    background-color: #005eff;
+    transform: rotate(180deg);
+  }
+}
+.circle3 {
+  width: 60px;
+  height: 60px;
+  animation: glow3 1.5s infinite ease;
+}
+@keyframes glow3 {
+  20% {
+    background-color: #fff;
+  }
+  40% {
+    background-color: #3881ff;
+    border-radius: 50%;
+  }
+  100% {
+    background-color: #005eff;
+    transform: rotate(180deg);
   }
 }

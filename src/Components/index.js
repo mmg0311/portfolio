@@ -8,4 +8,5 @@ import Navbar from './Navbar/Navbar';
 import Project from './Projects/Project';
 import Sidebar from './Sidebar/Sidebar';
 import Skills from './Skills/Skills';
-export {About,Contact,Experience,Float,Footer,Home,Navbar,Project,Sidebar,Skills};
+import Loader from './Loader/Loader';
+export {About,Contact,Experience,Float,Footer,Home,Navbar,Project,Sidebar,Skills,Loader};

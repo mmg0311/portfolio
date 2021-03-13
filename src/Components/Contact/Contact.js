@@ -1,26 +1,51 @@
 import React, { useState } from "react";
 import { db } from "../../config/fbConfig";
+import emailjs from "emailjs-com";
 const Contact = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [success, setSuccess] = useState("");
+  const [failure, setFailure] = useState("currently site is under maintenance");
   const handleSubmit = (e) => {
     e.preventDefault();
-    db.collection("contacts")
-      .add({ name, email, message })
-      .then(() => {
-        setSuccess(true);
-        setName("");
-        setEmail("");
-        setMessage("");
-      })
-      .catch((error) => {
-        setSuccess(false);
-        console.log(error);
-      });
+    const r = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    /*sending email */
+    // putting it in database for furthur use
+    if (r.test(email) && Boolean(name) && Boolean(message)) {
+      db.collection("contacts")
+        .add({ name, email, message })
+        .then(() => {
+          emailjs
+            .sendForm(
+              process.env.REACT_APP_EMAILJS_SERVICE_ID,
+              process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+              e.target,
+              process.env.REACT_APP_EMAILJS_USER_ID
+            )
+            .then(
+              (result) => {
+                console.log(result.text);
+              },
+              (error) => {
+                console.log(error.text);
+              }
+            );
+          setSuccess(true);
+          setName("");
+          setEmail("");
+          setMessage("");
+          setFailure("currently site is under maintenance");
+        })
+        .catch((error) => {
+          setSuccess(false);
 
-    console.log(name);
+          console.log(error);
+        });
+    } else {
+      setSuccess(false);
+      setFailure("Enter valid details to proceed");
+    }
   };
   return (
     <section id="contact" className="contact">
@@ -50,7 +75,7 @@ const Contact = () => {
           </div>
 
           <div className="contact__formContainer">
-            <form className="contact__form">
+            <form className="contact__form" onSubmit={handleSubmit}>
               <label htmlFor="fname">Full Name</label>
               <input
                 type="text"
@@ -79,9 +104,9 @@ const Contact = () => {
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />
-              <span className="submit__btn" onClick={handleSubmit}>
+              <button className="submit__btn" type="submit">
                 Submit <i className="fas fa-paper-plane"></i>
-              </span>
+              </button>
             </form>
           </div>
         </div>
@@ -100,9 +125,12 @@ const Contact = () => {
           <div className="alert fail">
             <p>
               <span>
-                <i className="fas fa-exclamation-triangle"></i> Sorry
-              </span>{" "}
-              currently site is under maintenance
+                <i className="fas fa-exclamation-triangle"></i>{" "}
+                {failure === "currently site is under maintenance"
+                  ? "Sorry"
+                  : "Please"}
+              </span>
+              {" " + failure}
             </p>
           </div>
         )}
