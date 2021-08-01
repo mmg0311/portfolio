@@ -81,7 +81,6 @@ const Contact = () => {
                 type="text"
                 id="fname"
                 name="name"
-                placeholder="Your name.."
                 vlaue={name}
                 onChange={(e) => setName(e.target.value)}
               />
@@ -91,7 +90,6 @@ const Contact = () => {
                 type="text"
                 id="mail"
                 name="mailid"
-                placeholder="Your email id.."
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
@@ -100,7 +98,6 @@ const Contact = () => {
               <textarea
                 id="subject"
                 name="subject"
-                placeholder="Write something.."
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
               />

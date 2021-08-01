@@ -20,21 +20,20 @@ const ExperienceCard = () => {
             </a>
           </span>
         </div>
-        <p>
-          <ul>
-            <li>
-              Worked on building front-end of Ingredient App (core web-app).
-            </li>
-            <li>
-              Pioneered the idea of developing mailing-service and
-              template-engine backend for sending dynamic email templates.
-            </li>
-            <li>
-              Worked on translation of web-apps in 8 international languages
-              thereby helped in diversifying the app worldwide.
-            </li>
-          </ul>
-        </p>
+
+        <ul>
+          <li>
+            Worked on building front-end of Ingredient App (core web-app).
+          </li>
+          <li>
+            Pioneered the idea of developing mailing-service and template-engine
+            backend for sending dynamic email templates.
+          </li>
+          <li>
+            Worked on translation of web-apps in 8 international languages
+            thereby helped in diversifying the app worldwide.
+          </li>
+        </ul>
       </div>
     </div>
   );
